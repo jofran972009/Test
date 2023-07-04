@@ -43,22 +43,26 @@
 	<bean id="OfyService" class="com.overcome.dao.OfyService" factory-method="getInstance">
 		<constructor-arg name="classes">
 			<array value-type="java.lang.Class">
-				<value>com.overcome.test.entity.Entity</value>
+				<value>com.overcome.test.entity.ExampleEntity</value>
 			</array>
 		</constructor-arg>
 	</bean>
 
 	<bean id="ServiceFactory" class="com.overcome.test.ServiceFactory" factory-method="getInstance">
-		<property name="entityService" ref="entityService" />
+		<property name="exampleEntityService" ref="exampleEntityService" />
 	</bean>
 
 	<!-- USER -->
-	<bean id="entityDao" class="com.overcome.dao.ObjectifyDao">
-		<constructor-arg name="clazz" value="com.overcome.test.entity.Entity" />
+	<bean id="exampleEntityDao" class="com.overcome.dao.ObjectifyDao">
+		<constructor-arg name="clazz" value="com.overcome.test.entity.ExampleEntity" />
 	</bean>
-	<bean id="entityService"
-		class="com.overcome.test.service.impl.EntityServiceImpl">
-		<property name="objectifyDao" ref="entityDao" />
+	<bean id="exampleEntityService"
+		class="com.overcome.test.service.impl.ExampleEntityServiceImpl">
+		<property name="objectifyDao" ref="exampleEntityDao" />
 	</bean>
+	
+	<!-- CONTROLLERS -->
+	
+	<bean id="GlobalController"   class="com.overcome.test.controller.GlobalController"  lazy-init="true" />
 
 </beans>

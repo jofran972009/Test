@@ -18,7 +18,7 @@ public class ServiceFactory {
 	
 	private ExampleEntityService exampleEntityService;
 	
-	public void setEntityService(ExampleEntityService exampleEntityService) {
+	public void setExampleEntityService(ExampleEntityService exampleEntityService) {
 		this.exampleEntityService = exampleEntityService;
 	}
 	public ExampleEntityService getExampleEntityService() {

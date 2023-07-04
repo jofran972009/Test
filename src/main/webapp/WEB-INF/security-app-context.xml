@@ -35,24 +35,26 @@
     
     <http use-expressions="true" create-session="ifRequired" auto-config="true" disable-url-rewriting="true" authentication-manager-ref="authentication-manager">
 		<intercept-url pattern="/**" access="isAuthenticated()"/>
-		<form-login login-page="/login" authentication-failure-url="/loginfailed" default-target-url="/" always-use-default-target="true" authentication-success-handler-ref="authSuccessHandler"/>
+		<form-login login-page="/login" authentication-failure-url="/loginfailed" default-target-url="/" always-use-default-target="true" />
         <logout logout-success-url="/login" />
-        <custom-filter after="BASIC_AUTH_FILTER" ref="urlFilter" />
+<!--         <custom-filter after="BASIC_AUTH_FILTER" ref="urlFilter" /> -->
         
     </http>       
-    <beans:bean id="urlFilter" class="com.overcome.test.security.UrlFilter">
-    	<beans:property name="userFunctions" ref="userFunctions" />
-    </beans:bean>
     
-    <beans:bean id="OcAuthenticationProvider" class="com.overcome.test.security.OcAuthenticationProvider" >
-        <beans:property name="userService" ref="userService" />
-        <beans:property name="userFunctions" ref="userFunctions" />
-    </beans:bean>
+<!--     <beans:bean id="OcAuthenticationProvider" class="com.overcome.test.security.OcAuthenticationProvider" > -->
+<!--         <beans:property name="userService" ref="userService" /> -->
+<!--         <beans:property name="userFunctions" ref="userFunctions" /> -->
+<!--     </beans:bean> -->
     
-    <beans:bean id="authSuccessHandler" class="com.overcome.test.security.AuthSuccessHandler" />    
+<!--     <beans:bean id="authSuccessHandler" class="com.overcome.test.security.AuthSuccessHandler" />     -->
  
  	<authentication-manager alias="authentication-manager">
-     	<authentication-provider ref="OcAuthenticationProvider" />
+ 		<authentication-provider>
+ 			<user-service>
+				<user name="test" password="123" authorities="admin" />
+	    	</user-service>
+ 		</authentication-provider>
+<!--      	<authentication-provider ref="OcAuthenticationProvider" /> -->
 	</authentication-manager>	
 </beans:beans>
 <!-- SANDBOX -->

@@ -3,7 +3,7 @@
 <script src="js/login.js"></script>
 <div class="container">
 	<div class="col text-center">
-		<img src="/img/logo/deforest_logo.png" class="rounded" alt="Deforest abogados" style="width: 120px;">
+		<img src="/img/logo/logo_overcome.png" class="rounded" alt="Overcome Test" style="width: 120px;">
 	</div>
 	<div id="loginForm" class="card card-login mx-auto mt-1">
 		<div class="card-header text-center h5">Accede a tu cuenta</div>

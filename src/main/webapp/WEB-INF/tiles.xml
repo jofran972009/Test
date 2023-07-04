@@ -18,6 +18,12 @@
 		<put-attribute name="body" cascade="true" value="/WEB-INF/templates/pages/panel.jsp" />
 	</definition>
 	
+	<!-- PAGINAS -->
+	<definition name="page.login" extends="base">
+		<put-attribute name="title" value="Login" cascade="true" />
+		<put-attribute name="body" cascade="true" value="/WEB-INF/templates/pages/login.jsp" />
+	</definition>
+	
 </tiles-definitions>
 
 <!-- Invoice -->
