@@ -1,4 +1,4 @@
-package com.overcome.cona.controller;
+package com.overcome.test.controller;
 
 import org.springframework.stereotype.Controller;
 

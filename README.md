@@ -8,7 +8,7 @@ public class NuevoController{}
 ```
 * Registrar el controller en `mvc-dispatcher-servlet.xml`
 ```xml
-<bean id="NuevoController" class="com.overcome.cona.controller.NuevoController" />
+<bean id="NuevoController" class="com.overcome.test.controller.NuevoController" />
 ``` 
 * Registrar el `RequestMapping` dentro  `security-app-context.xml` para asignar algún tipo de seguridad
  
@@ -22,7 +22,7 @@ public class NuevaEntidad{}
 * Declarar un bean de ObjectifyDao
 ```xml
 <bean id="nuevaEntidadDao" class="com.overcome.dao.ObjectifyDao">
-     <constructor-arg name="clazz" value="com.overcome.cona.entity.NuevaEntidad" />
+     <constructor-arg name="clazz" value="com.overcome.test.entity.NuevaEntidad" />
 </bean>
 ```
 * Registrar la entidad en `mvc-dispatcher-servlet.xml` en bean OfyService como un nuevo elemento del arreglo de clases
@@ -31,7 +31,7 @@ public class NuevaEntidad{}
 	<constructor-arg name="classes">
 		<array value-type="java.lang.Class">
             ...
-			<value>com.overcome.cona.entity.NuevaEntidad</value>
+			<value>com.overcome.test.entity.NuevaEntidad</value>
 		</array>
 	</constructor-arg>
 </bean>
@@ -41,13 +41,13 @@ public class NuevaEntidad{}
 * Crear el service y service implementation 
 * Registrar la implementación del service en `mvc-dispatcher-servlet.xml` como un bean
 ```xml
-<bean id="nuevaEntidadService" class="com.overcome.cona.service.impl.NuevaEntidadImpl">
+<bean id="nuevaEntidadService" class="com.overcome.test.service.impl.NuevaEntidadImpl">
      <property name="objectifyDao" ref="nuevaEntidadDao" /> // Es el bean que se declaró al registrar el bean del nueva entidad
 </bean>
 ```
 * Agregar en `mvc-dispatcher-servlet.xml` dentro del bean de ServiceFactory una propiedad don el nuevo service
 ``` xml
-<bean id="ServiceFactory" class="com.overcome.cona.ServiceFactory" factory-method="getInstance">
+<bean id="ServiceFactory" class="com.overcome.test.ServiceFactory" factory-method="getInstance">
 	 ...
      <property name="roleService" ref="nuevaEntidadService" />
 </bean>
@@ -58,11 +58,11 @@ public class NuevaEntidad{}
 * Declarar una nueva clase java que se comportará como el functions deseado
 * Declararlo en 
 ```xml
-<bean id="nuevoFunctions" class="com.overcome.cona.functions.NuevoFunctions" />
+<bean id="nuevoFunctions" class="com.overcome.test.functions.NuevoFunctions" />
 ```
 * Luego inyectarlo dónde lo necesites, por ejemplo en un `controller``
 ```xml
-<bean id="RolesController" class="com.overcome.cona.controller.RolesController">
+<bean id="RolesController" class="com.overcome.test.controller.RolesController">
 	<property name="rolesFunctions" ref="rolesFunctions" />
 </bean>
 ```

@@ -1,4 +1,4 @@
-package com.overcome.cona;
+package com.overcome.test;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.overcome.cona")
+@ComponentScan(basePackages = "com.overcome.test")
 public class AppConfig extends WebMvcConfigurerAdapter{
  
     /**

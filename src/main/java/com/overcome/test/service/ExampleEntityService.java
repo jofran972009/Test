@@ -1,4 +1,4 @@
-package com.overcome.cona.service;
+package com.overcome.test.service;
 
 public interface ExampleEntityService {
 }

@@ -40,16 +40,16 @@
         <custom-filter after="BASIC_AUTH_FILTER" ref="urlFilter" />
         
     </http>       
-    <beans:bean id="urlFilter" class="com.overcome.cona.security.UrlFilter">
+    <beans:bean id="urlFilter" class="com.overcome.test.security.UrlFilter">
     	<beans:property name="userFunctions" ref="userFunctions" />
     </beans:bean>
     
-    <beans:bean id="OcAuthenticationProvider" class="com.overcome.cona.security.OcAuthenticationProvider" >
+    <beans:bean id="OcAuthenticationProvider" class="com.overcome.test.security.OcAuthenticationProvider" >
         <beans:property name="userService" ref="userService" />
         <beans:property name="userFunctions" ref="userFunctions" />
     </beans:bean>
     
-    <beans:bean id="authSuccessHandler" class="com.overcome.cona.security.AuthSuccessHandler" />    
+    <beans:bean id="authSuccessHandler" class="com.overcome.test.security.AuthSuccessHandler" />    
  
  	<authentication-manager alias="authentication-manager">
      	<authentication-provider ref="OcAuthenticationProvider" />

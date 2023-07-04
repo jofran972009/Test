@@ -1,9 +1,9 @@
-package com.overcome.cona.functions;
+package com.overcome.test.functions;
 
 import java.util.logging.Logger;
 
-import com.overcome.cona.ServiceFactory;
-import com.overcome.cona.service.ExampleEntityService;
+import com.overcome.test.ServiceFactory;
+import com.overcome.test.service.ExampleEntityService;
 
 public class ExampleEntityFunctions {
 	private ExampleEntityService exampleEntityService = ServiceFactory.getInstance().getExampleEntityService();

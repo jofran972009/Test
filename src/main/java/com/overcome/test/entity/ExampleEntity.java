@@ -1,4 +1,4 @@
-package com.overcome.cona.entity;
+package com.overcome.test.entity;
 
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Entity;

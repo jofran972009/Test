@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="com.overcome.cona.Controls" %>
+<%@ page import="com.overcome.test.Controls" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="te" uri="http://tiles.apache.org/tags-tiles-extras" %>

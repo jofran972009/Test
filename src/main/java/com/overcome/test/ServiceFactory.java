@@ -1,6 +1,6 @@
-package com.overcome.cona;
+package com.overcome.test;
 
-import com.overcome.cona.service.ExampleEntityService;
+import com.overcome.test.service.ExampleEntityService;
 
 public class ServiceFactory {
 
