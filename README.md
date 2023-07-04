@@ -1,13 +1,3 @@
-Configuración de BaseLib
-=============================
-
-1. Conseguir base lib de algún repo de Overcome o preguntarle a Carlos
-2. Buscar el comando correspondiente a la versión de maven ´https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html´
-3. No hay paso 3
-
-
-# UPDATE
-Ya no es necesario instalar de forma manual baselib
 
 # Cómo agregar controller
 * Crear controller java
